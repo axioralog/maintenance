@@ -1,28 +1,45 @@
-# maintenance
-Under Maintenance web page
+# 🛠️ Maintenance — Under Maintenance Web Page
 
-# Cómo ejecutar
-## 1) Inicializa el módulo si no lo hiciste
+Este proyecto muestra una página de **"Under Maintenance"** utilizando **Golang + Gin**.  
+Permite activar o desactivar el modo mantenimiento mediante una **variable de entorno** o un **archivo flag**.
+
+---
+
+## 🚀 Cómo ejecutar
+
+### 1️⃣ Inicializa el módulo (solo si aún no lo hiciste)
+
+```bash
 go mod init tu-proyecto
 go get github.com/gin-gonic/gin@v1.10.0
+```
+### 2️⃣ Ejecuta el servidor
 
-## 2) Ejecuta
+```bash
 go run main.go
-### Abre http://localhost:8080
+```
+## 🔧 Activar / Desactivar mantenimiento
 
-# Activar/desactivar mantenimiento
-## Opción A: Variable de entorno
-### Activar
+### 🟣 Opción A — Variable de entorno
+####🔹 Activar con variable en línea
+```bash
 MAINTENANCE=1 go run main.go
-
-### O en Linux/macOS con server ya corriendo (usando systemd o export por línea de comando antes de lanzar)
+```
+#### 🔹 Activar exportando la variable (Linux/macOS)
+```bash
 export MAINTENANCE=1
 go run main.go
+```
 
-## Opción B: Archivo "flag"
-### Activar
+### 🟢 Opción B — Archivo flag
+
+#### 🔹 Activar
+```bash
 touch maintenance.enabled
+```
 
-### Desactivar
+#### 🔹 Desactivar
+```bash
 rm -f maintenance.enabled
+```
 
