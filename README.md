@@ -1,7 +1,7 @@
 # maintenance
 Under Maintenance web page
 
-#Cómo ejecutar
+# Cómo ejecutar
 ## 1) Inicializa el módulo si no lo hiciste
 go mod init tu-proyecto
 go get github.com/gin-gonic/gin@v1.10.0
